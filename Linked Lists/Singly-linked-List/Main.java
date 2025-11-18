@@ -21,9 +21,12 @@ public class Main{
         //link the third node
         head.next.next = new Node(40);
 
+        head.next.next.next = new Node(50);
+
         //print linked list
         while(head != null){
             System.out.println(head.data + " ");
+            System.out.println(head.next + " ");
             head = head.next;
         }
 
