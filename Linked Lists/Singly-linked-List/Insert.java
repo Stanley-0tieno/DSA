@@ -15,6 +15,24 @@ public class Insert {
         newNode.next = head;
         return newNode;
     }
+    
+    static Node InsertAtEnd(Node head, int y){
+        Node newNode = new Node(y);
+        // if LL is empty , make the new node as the head and return
+        if (head == null){
+            return newNode;
+        }
+
+        //store head reference in a temp variable
+        Node last = head;
+
+        while(last.next != null){
+            last = last.next;
+        }
+        last.next = newNode;
+        return head;
+
+    }
 
     public static void main(String[] args){
 
@@ -22,7 +40,7 @@ public class Insert {
         head.next = new Node(20);
         head.next.next = new Node(30);
 
-        head = InsertAtFront (head, 40);
+        head = InsertAtEnd(head, 40);
         printList(head);
     }
 
