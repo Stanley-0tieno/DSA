@@ -38,7 +38,4 @@ public class Insert {
         }
         System.out.println();
     }
-
-
-
 }
