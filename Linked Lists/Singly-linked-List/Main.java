@@ -3,8 +3,8 @@ class Node{
     int data;
     Node next;
 
-    Node(int new_int){
-        this.data = new_int;
+    Node(int x){
+        this.data = x;
         this.next = null;
 
     }
@@ -37,4 +37,5 @@ public class Main{
         System.out.println(head.data);
         traverselList(head.next);
     }
+
 }
