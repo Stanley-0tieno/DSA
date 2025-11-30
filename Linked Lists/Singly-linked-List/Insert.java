@@ -10,6 +10,31 @@ class Node {
 
 public class Insert {
 
+    static Node insertPos(Node head, int pos, int val){
+        if (pos < 1){
+            return head;
+        }
+        if (pos == 1){
+            Node newNode = new Node (val);
+            newNode.next = head;
+            return newNode;
+        }
+        Node curr = head;
+
+        for (int i = 1; i < pos-1 && curr != null; i++){
+            curr = curr.next;
+        }
+        
+        if (curr == null){
+            return head;
+        }
+
+        Node newNode = new Node(val);
+        curr.next = newNode;
+        return head;
+
+    }
+
     static Node InsertAtFront(Node head, int y){
         Node newNode = new Node(y);
         newNode.next = head;
@@ -36,11 +61,12 @@ public class Insert {
 
     public static void main(String[] args){
 
-        Node head  = new Node(10);
-        head.next = new Node(20);
-        head.next.next = new Node(30);
+        Node head  = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(4);
 
-        head = InsertAtEnd(head, 40);
+        int val = 3, pos = 3;
+        head = insertPos(head, pos, val);
         printList(head);
     }
 
