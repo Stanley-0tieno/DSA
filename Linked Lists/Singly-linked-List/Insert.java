@@ -6,7 +6,7 @@ class Node {
         data = x;
         next = null;
     }
-}
+}   
 
 public class Insert {
 

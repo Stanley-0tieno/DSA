@@ -16,6 +16,7 @@ public class Main{
         head.next.next = new Node(30);
         head.next.next.next = new Node(40);
         recursiveTraverseListNode(head);
+        // traverselList(head); 
 
         //traverserList(head);  can be inplemented for the iterattive approach
     }
