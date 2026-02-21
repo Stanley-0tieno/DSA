@@ -1,5 +1,5 @@
-num = [2, 7, 11, 15 ]
-target = 9
+num = [4, 5, 0, 4, 6]
+target = 8
 
 def Solution(num, target):
     hashmap = {}
@@ -11,5 +11,6 @@ def Solution(num, target):
             break
         hashmap[n] = i
 
-
 Solution(num, target)
+
+
