@@ -12,7 +12,6 @@ class RecentCounter(object):
         while self.queue[0] < t-3000:
             self.queue.popleft()
 
-
 rc = RecentCounter()
 
 rc.ping(1)
